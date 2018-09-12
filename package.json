@@ -1,0 +1,23 @@
+{
+    "name": "wordtonumber",
+    "version": "1.0.0",
+    "description": "Convert Word to Number",
+    "main": "index.js",
+    "scripts": {
+        "start": "node index.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ShivaShankerReddy/wordTONumber.git"
+    },
+    "keywords": [
+        "word",
+        "number"
+    ],
+    "author": "Shiv@",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/ShivaShankerReddy/wordTONumber/issues"
+    },
+    "homepage": "https://github.com/ShivaShankerReddy/wordTONumber#readme"
+}
