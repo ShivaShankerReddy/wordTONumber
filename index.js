@@ -37,7 +37,6 @@ const mainNumbers = {
 var wordToNumbers = (input) => {
     var inputWords = input.split(" ");
     let inputLength = inputWords.length;
-    console.log(inputWords, "========>>>>>>>>>>>", inputLength);
     let finalNumberValue;
     switch (inputLength) {
         case 1: 
@@ -59,6 +58,4 @@ var wordToNumbers = (input) => {
     return finalNumberValue;
 };
 
-module.exports = {
-    wordToNumbers: wordToNumbers
-};
+module.exports.wordToNumbers = wordToNumbers;
