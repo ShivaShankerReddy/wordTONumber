@@ -1,5 +1,5 @@
 {
-    "name": "wordtonumber",
+    "name": "shiva-word-to-number",
     "version": "1.0.0",
     "description": "Convert Word to Number",
     "main": "index.js",
