@@ -30,12 +30,21 @@ const mainNumbers = {
     hundred: 100,
     thousand: 1000,
     lakh: 100000,
-    crore: 10000000
+    lakhs: 100000,
+    million: 1000000,
+    millions: 1000000,
+    crore: 10000000,
+    crores: 10000000,
+    billion: 100000000,
+    billions: 100000000
 };
 
 
 var wordToNumbers = (input) => {
-    var inputWords = input.split(" ");
+    var inputWords = input.toLowerCase().split(" ");
+    var inputWords = inputWords.filter(element => {
+        return element != "and";
+    });
     let inputLength = inputWords.length;
     let finalNumberValue;
     switch (inputLength) {
@@ -43,7 +52,7 @@ var wordToNumbers = (input) => {
             finalNumberValue = mainNumbers[inputWords[0]];
             break;
         case 2:
-            if (inputWords[1] == "hundred" || inputWords[1] == "thousand" || inputWords[1] == "lakh" || inputWords[1] == "crore") {
+            if (["hundred", "thousand", "lakh", "crore", "million", "billion", "crores", "lakhs"].includes(inputWords[1])) {
                 finalNumberValue = mainNumbers[inputWords[0]] * mainNumbers[inputWords[1]];
             } else {
                 finalNumberValue = mainNumbers[inputWords[0]] + mainNumbers[inputWords[1]];
@@ -53,9 +62,12 @@ var wordToNumbers = (input) => {
             finalNumberValue = mainNumbers[inputWords[0]] * mainNumbers[inputWords[1]] + mainNumbers[inputWords[2]];
             break;
         case 4:
-            finalNumberValue = mainNumbers[inputWords[0]] * mainNumbers[inputWords[1]] + mainNumbers[inputWords[2]] + mainNumbers[inputWords[3]];
+            finalNumberValue = mainNumbers[inputWords[0]] * mainNumbers[inputWords[1]] + mainNumbers[inputWords[2]] * mainNumbers[inputWords[3]];
+        case 5:
+            finalNumberValue = mainNumbers[inputWords[0]] * mainNumbers[inputWords[1]] + mainNumbers[inputWords[2]] * mainNumbers[inputWords[3]] + mainNumbers[inputWords[4]];
     }
     return finalNumberValue;
 };
+
 
 module.exports.wordToNumbers = wordToNumbers;
