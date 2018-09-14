@@ -7,7 +7,7 @@ Converts input string to number
 
 #### API USAGE
 
-**wordToNumber**(input)
+**wordToNumber**(`input`)
 * {string} **input** - input string value
 
 
@@ -15,3 +15,5 @@ Converts input string to number
 
 - converts `one hundred` to 100
 - converts `nine` to 9
+- converts `ten millions fifty thousand and five` to 10050005
+- converst `two lakhs five hundred and fifty` to `200550` 
