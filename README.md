@@ -7,7 +7,7 @@ Converts input string to number
 
 #### API USAGE
 
-**wordToNumber**(`input`)
+**wordToNumbers**(`input`)
 * {string} **input** - input string value
 
 
