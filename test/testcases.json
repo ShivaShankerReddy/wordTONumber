@@ -1,0 +1,30 @@
+[
+    {
+        "Query": "ten",
+        "expected": 10
+    },
+    {
+        "Query": "two thousand fifty",
+        "expected": 2050
+    },
+    {
+        "Query": "one hundred and fifty",
+        "expected": 150
+    },
+    {
+        "Query": "one thousand two hundred and ten",
+        "expected": 1210
+    },
+    {
+        "Query": "two lakhs five hundred and fifty",
+        "expected": 200550
+    },
+    {
+        "Query": "ten crores",
+        "expected": 100000000
+    },
+    {
+        "Query": "ten millions fifty thousand and five",
+        "expected": 10050005
+    }
+]

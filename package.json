@@ -1,10 +1,17 @@
 {
     "name": "words-and-numbers",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Convert Word to Number",
     "main": "index.js",
     "scripts": {
-        "start": "node index.js"
+        "start": "node index.js",
+        "test": "nyc mocha"
+    },
+    "devDependencies": {
+        "mocha": "^5.2.0",
+        "npm-check": "^5.7.1",
+        "nyc": "^12.0.2",
+        "chai": "4.1.2"
     },
     "repository": {
         "type": "git",
@@ -12,7 +19,8 @@
     },
     "keywords": [
         "word",
-        "number"
+        "number",
+        "convert"
     ],
     "author": "Shiv@",
     "license": "MIT",
