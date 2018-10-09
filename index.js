@@ -63,8 +63,34 @@ var wordToNumbers = (input) => {
             break;
         case 4:
             finalNumberValue = mainNumbers[inputWords[0]] * mainNumbers[inputWords[1]] + mainNumbers[inputWords[2]] * mainNumbers[inputWords[3]];
+            break;
         case 5:
             finalNumberValue = mainNumbers[inputWords[0]] * mainNumbers[inputWords[1]] + mainNumbers[inputWords[2]] * mainNumbers[inputWords[3]] + mainNumbers[inputWords[4]];
+            break;
+        case 6:
+            let numValue;
+            if (inputWords[4].endsWith('ty')) {
+                numValue = mainNumbers[inputWords[4]] + mainNumbers[inputWords[5]];
+            } else {
+                numValue = mainNumbers[inputWords[4]] * mainNumbers[inputWords[5]];
+            }
+            finalNumberValue = mainNumbers[inputWords[0]] * mainNumbers[inputWords[1]] + mainNumbers[inputWords[2]] * mainNumbers[inputWords[3]] + numValue;
+            break;
+        case 7: 
+            finalNumberValue = mainNumbers[inputWords[0]] * mainNumbers[inputWords[1]] + mainNumbers[inputWords[2]] * mainNumbers[inputWords[3]] + mainNumbers[inputWords[4]] * mainNumbers[inputWords[5]] + mainNumbers[inputWords[6]];
+            break;
+        case 8:
+            let numValueEight;
+            if (inputWords[6].endsWith('ty')) {
+                numValueEight = mainNumbers[inputWords[6]] + mainNumbers[inputWords[7]];
+            } else {
+                numValueEight = mainNumbers[inputWords[6]] * mainNumbers[inputWords[7]];
+            }
+            finalNumberValue = mainNumbers[inputWords[0]] * mainNumbers[inputWords[1]] + mainNumbers[inputWords[2]] * mainNumbers[inputWords[3]] + mainNumbers[inputWords[4]] * mainNumbers[inputWords[5]] + numValueEight;
+            break;
+        case 9:
+            finalNumberValue = Number(mainNumbers[inputWords[0]].toString() + mainNumbers[inputWords[1]].toString()) * mainNumbers[inputWords[2]] + mainNumbers[inputWords[3]] * mainNumbers[inputWords[4]] + mainNumbers[inputWords[5]] * mainNumbers[inputWords[6]] * mainNumbers[inputWords[7]] + mainNumbers[inputWords[8]];
+            break;
     }
     return finalNumberValue;
 };
